@@ -1,12 +1,33 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const Detail = (props) => {
+  const ImageURL = "https://api.thecatapi.com/v1/images/";
+
+  const [image, setImage] = useState([]);
+
+  async function getImageData() {
+    if (props.data.reference_image_id) {
+      const result = await axios.get(ImageURL + props.data.reference_image_id);
+
+      setImage(result.data);
+      // console.log(result.data);
+      return result;
+    } else {
+      setImage([]);
+    }
+  }
+
+  useEffect(() => {
+    getImageData();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
     <div className="card mb-3">
       <div className="row g-0">
         <div className="col-md-4">
           <img
-            src="http://www.placehold.co/600x500.png"
+            src={image.url ? image.url : "http://www.placehold.co/600x600.png"}
             style={{ width: 600, padding: 10 }}
             className="img-fluid rounded-start"
             alt="..."
