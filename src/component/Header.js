@@ -5,7 +5,7 @@ const Header = () => {
     <nav className="navbar navbar-light bg-light">
       <div className="container">
         <a className="navbar-brand" href="/">
-          Catcyclopedia
+          <strong>Catcyclopedia</strong>
         </a>
         <form className="d-flex">
           <input

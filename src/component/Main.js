@@ -9,6 +9,7 @@ const Main = () => {
   async function getData() {
     const result = await axios.get(APIurl);
     setCatList(result.data);
+    console.log(result.data);
     return result;
   }
 
@@ -17,12 +18,12 @@ const Main = () => {
   }, []);
 
   return (
-    <div className="container">
-      <h1>Catcyclopedia</h1>
-      <div class="accordion" id="catAccordion">
+    <div className="container my-5">
+      <div className="accordion" id="accordionExample">
         {catList.map((res) => {
           return <List key={res.id} data={res} />;
         })}
+        {/* <List /> */}
       </div>
     </div>
   );
