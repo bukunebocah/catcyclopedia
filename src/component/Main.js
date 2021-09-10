@@ -19,9 +19,11 @@ const Main = () => {
   return (
     <div className="container">
       <h1>Catcyclopedia</h1>
-      {catList.map((res) => {
-        return <List key={res.id} data={res} />;
-      })}
+      <div class="accordion" id="catAccordion">
+        {catList.map((res) => {
+          return <List key={res.id} data={res} />;
+        })}
+      </div>
     </div>
   );
 };
