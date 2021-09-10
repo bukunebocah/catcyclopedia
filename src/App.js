@@ -1,8 +1,15 @@
-import "./App.css";
+import { Fragment } from "react";
+
 import Header from "./component/Header";
+import Main from "./component/Main";
 
 function App() {
-  return <Header />;
+  return (
+    <Fragment>
+      <Header />
+      <Main />
+    </Fragment>
+  );
 }
 
 export default App;
