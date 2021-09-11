@@ -1,30 +1,39 @@
 import React, { useEffect, useState } from "react";
 import List from "./List";
 import axios from "axios";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 const Main = () => {
-  const BreedsURL = "https://api.thecatapi.com/v1/breeds";
+  const BreedsURL = "https://api.thecatapi.com/v1/breeds?limit=";
 
   const [catList, setCatList] = useState([]);
-
-  async function getBreedsData() {
-    const result = await axios.get(BreedsURL);
-    setCatList(result.data);
-    // console.log(result.data);
-    return result;
-  }
+  const [perPage, setPerPage] = useState(10);
 
   useEffect(() => {
+    async function getBreedsData() {
+      const result = await axios.get(BreedsURL + perPage);
+      setCatList(result.data);
+      // console.log(result.data);
+    }
     getBreedsData();
-  }, []);
+  }, [perPage]);
+
+  const nextPage = () => {
+    setPerPage(perPage + 10);
+  };
 
   return (
     <div className="container my-5">
       <div className="accordion" id="accordionExample">
-        {catList.map((res) => {
-          return <List key={res.id} data={res} />;
-        })}
-        {/* <List /> */}
+        <InfiniteScroll
+          dataLength={catList.length}
+          next={nextPage}
+          hasMore={true}
+        >
+          {catList.map((res) => {
+            return <List key={res.id} data={res} />;
+          })}
+        </InfiniteScroll>
       </div>
     </div>
   );
