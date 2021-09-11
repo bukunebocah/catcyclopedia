@@ -123,7 +123,7 @@ const Detail = (props) => {
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row mt-3">
               <h5>More Info :</h5>
               <div
                 className="btn-group"
