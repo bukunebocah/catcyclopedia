@@ -24,6 +24,16 @@ const Main = () => {
 
   return (
     <div className="container my-5">
+      <div className="input-group input-group-lg mb-3">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Enter Keyword"
+          aria-label="Username"
+          aria-describedby="inputGroup-sizing-lg"
+        />
+      </div>
+
       <div className="accordion" id="accordionExample">
         <InfiniteScroll
           dataLength={catList.length}
