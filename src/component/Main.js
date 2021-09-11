@@ -38,7 +38,7 @@ const Main = () => {
         <input
           type="text"
           className="form-control"
-          placeholder="Enter Race Name"
+          placeholder="Enter Breed Name"
           aria-label="Username"
           aria-describedby="inputGroup-sizing-lg"
           onChange={(event) => {
