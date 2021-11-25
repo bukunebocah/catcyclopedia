@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/catcyclopedia/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/catcyclopedia/static/js/main.b2d6402a.chunk.js",
+    "main.js.map": "/catcyclopedia/static/js/main.b2d6402a.chunk.js.map",
+    "runtime-main.js": "/catcyclopedia/static/js/runtime-main.b0dcf8ce.js",
+    "runtime-main.js.map": "/catcyclopedia/static/js/runtime-main.b0dcf8ce.js.map",
+    "static/js/2.230e2313.chunk.js": "/catcyclopedia/static/js/2.230e2313.chunk.js",
+    "static/js/2.230e2313.chunk.js.map": "/catcyclopedia/static/js/2.230e2313.chunk.js.map",
+    "static/js/3.81698e9b.chunk.js": "/catcyclopedia/static/js/3.81698e9b.chunk.js",
+    "static/js/3.81698e9b.chunk.js.map": "/catcyclopedia/static/js/3.81698e9b.chunk.js.map",
+    "index.html": "/catcyclopedia/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/catcyclopedia/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.230e2313.chunk.js.LICENSE.txt": "/catcyclopedia/static/js/2.230e2313.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b0dcf8ce.js",
+    "static/js/2.230e2313.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.b2d6402a.chunk.js"
+  ]
+}
